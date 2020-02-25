@@ -31,8 +31,6 @@ typeofnewDate(); //object 无效
 typeofnewRegExp(); //object 无效
 ```
 
-
-
 有些时候，typeof 操作符会返回一些令人迷惑但技术上却正确的值：
 
 - 对于基本类型，除 null 以外，均可以返回正确的结果。
@@ -58,24 +56,20 @@ instanceof (A,B) = {
 }
 ```
 
-
-
 从上述过程可以看出，当 A 的 __proto__ 指向 B 的 prototype 时，就认为 A 就是 B 的实例，我们再来看几个例子：
 
 ```js
 [] instanceof Array; // true
 {} instanceof Object;// true
 newDate() instanceof Date;// true
- 
+
 function Person(){};
 newPerson() instanceof Person;
- 
+
 [] instanceof Object; // true
 newDate() instanceof Object;// true
 newPerson instanceof Object;// true
 ```
-
-
 
 我们发现，虽然 instanceof 能够判断出 [ ] 是Array的实例，但它认为 [ ] 也是Object的实例，为什么呢？
 
@@ -97,8 +91,6 @@ vararr = newxArray(1,2,3); // [1,2,3]
 arr instanceof Array; // false
 ```
 
-
-
 针对数组的这个问题，ES5 提供了 Array.isArray() 方法 。该方法用以确认某个对象本身是否为 Array 类型，而不区分该对象在哪个环境中创建。
 
 ```js
@@ -106,8 +98,6 @@ if(Array.isArray(value)){
    //对数组执行某些操作
 }
 ```
-
-
 
 Array.isArray() 本质上检测的是对象的 [[Class]] 值，[[Class]] 是对象的一个内部属性，里面包含了对象的类型信息，其格式为 [object Xxx] ，Xxx 就是对应的具体类型 。对于数组而言，[[Class]] 的值就是 [object Array] 。
 
@@ -162,5 +152,3 @@ Object.prototype.toString.call(newError()) ; // [object Error]
 Object.prototype.toString.call(document) ; // [object HTMLDocument]
 Object.prototype.toString.call(window) ; //[object global] window 是全局对象 global 的引用
 ```
-
-

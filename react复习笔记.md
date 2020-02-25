@@ -294,9 +294,9 @@ this.setState(function(state, props) {
 - **handling events**
   
   React 事件的命名采用小驼峰式（camelCase），而不是纯小写。
-
+  
   使用 JSX 语法时你需要传入一个函数作为事件处理函数，而不是一个字符串。
-
+  
   例如，传统的 HTML：
 
 ```html
@@ -764,5 +764,3 @@ this.setState(partialState);
 - **状态提升**
   
   简单来讲就是假如有2个组件，这两个组件需要共享状态，比较好的方法就是将该状态提升至这两个组件的最近的父组件。具体细节在[react变量提升](https://zh-hans.reactjs.org/docs/lifting-state-up.html)
-
-

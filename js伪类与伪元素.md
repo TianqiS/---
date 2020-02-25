@@ -25,8 +25,6 @@
 </ul>
 ```
 
-
-
 如果想要给第一项添加样式，可以在为第一个<li> 添加一个类，并在该类中定义对应样式：
 
 ```html
@@ -43,8 +41,6 @@ li.first-item {
  color: orange
  }
 ```
-
-
 
 如果不用添加类的方法，我们可以通过给设置第一个<li> 的:first-child 伪类来为其添加样式。这个时候，被修饰的<li> 元素依然处于文档树中。
 
@@ -67,8 +63,6 @@ li:first-child {
 <p>Hello World, and wish you have a good day!</p>
 ```
 
-
-
 如果想要给该段落的第一个字母添加样式，可以在第一个字母中包裹一个<span> 元素，并设置该 span 元素的样式：
 
 **HTML:**
@@ -84,8 +78,6 @@ li:first-child {
     font-size: 5em;
 }
 ```
-
-
 
 如果不创建一个<span> 元素，我们可以通过设置<p> 的:first-letter 伪元素来为其添加样式。这个时候，看起来好像是创建了一个虚拟的<span> 元素并添加了样式，但实际上文档树中并不存在这个<span> 元素。
 
@@ -104,8 +96,6 @@ p:first-letter {
 ```
 
 从上述例子中可以看出，伪类的操作对象是文档树中已有的元素，而伪元素则创建了一个文档数外的元素。因此，伪类与伪元素的区别在于：有没有创建一个文档树之外的元素。
-
-
 
 ### 使用js控制伪元素的方法(转自[简书](https://www.jianshu.com/p/37f639f108dd))
 
@@ -156,7 +146,7 @@ getPropertyValue()和直接使用键值访问，都可以访问CSSStyleDeclarati
 
 **2.**
 
-伪元素默认是”display: inline”。如果没有定义display属性，即使在CSS中显式设置了width的属性值为固定的大小如”100px”，但是最后获取的width值仍是”auto”。这是因为行内元素不能自定义设置宽高。解决办法是给伪元素修改display属性为”block”、”inline-block”或其他。
+伪元素默认是”**display: inline**”。如果没有定义display属性，即使在CSS中显式设置了width的属性值为固定的大小如”100px”，但是最后获取的width值仍是”auto”。这是因为行内元素不能自定义设置宽高。解决办法是给伪元素修改display属性为”block”、”inline-block”或其他。
 
 ## 四. 更改伪元素的样式：
 
